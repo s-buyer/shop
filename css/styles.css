@@ -1,0 +1,174 @@
+@import url(./normalize.css);
+@import url(./iconfonts.css);
+
+
+body,
+html {
+  font-family: "Roboto", serif;
+  font-weight: 400;
+  background-color: rgb(134, 134, 138);
+  background-repeat: no-repeat;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: 0.3s;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  bottom: 5%;
+  right: 2%;
+  z-index: 2;
+}
+
+.brand {
+  padding: 10px;
+  flex: 0 0 33.3%;
+}
+
+.brand__cont {
+  padding: 10px 20px;
+  background-color: #fff;
+  border: 2px solid rgb(173, 171, 171);
+  border-radius: 10px;
+  filter: opacity(60%);
+  transition: 0.3s;
+}
+
+.brand p::-webkit-scrollbar {
+  width: 2px;
+}
+
+.brand p::-webkit-scrollbar-thumb {
+  background-color: rgb(206, 205, 205);
+}
+
+.brand__cont:hover {
+  border: 2px solid rgb(148, 147, 147);
+  box-shadow: 0px 1px 5px 0px;
+  filter: opacity(100%);
+  transform: scale(1.03, 1.03);
+  z-index: 1;
+}
+
+.brand__box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 30px;
+}
+
+.brand__box img {
+  object-fit: contain;
+  height: 100%;
+}
+
+.brand__title {
+  font-size: 24px;
+  text-align: center;
+  margin: 15px auto;
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+  text-transform: lowercase;
+}
+
+.brand__desc {
+  display: none;
+  width: 100%;
+  height: 95px;
+  overflow-y: auto;
+  margin-bottom: 40px;
+}
+
+.brand__button {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 5px;
+  border: 2px solid red;
+  max-width: 130px;
+}
+
+.brand__button:hover {
+  color: #fff;
+  background-color: red;
+}
+
+.icon-telegram,
+.icon-phone,
+.icon-instagram {
+  flex: 1 1 33.3%;
+  margin: 0 10px;
+  transition: 0.2s;
+}
+
+.icon-telegram:hover,
+.icon-phone:hover,
+.icon-instagram:hover {
+  color: red;
+  transform: scale(1.1, 1.1);
+}
+
+
+@media only screen and (max-width: 1024px) {
+  .container {
+    max-width: 90%;
+  }
+  .brand {
+    flex: 0 0 50%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    max-width: 100%;
+    justify-content: center;
+  }
+
+  .brand {
+    flex: 0 0 65%;
+  }
+}
+
+@media only screen and (max-width: 598px) {
+  .brand {
+    flex: 0 0 80%;
+  }
+  .brand__title {
+    font-size: 20px;
+  }
+  .links {
+    flex-direction: column;
+    bottom: 2%;
+    right: 3%;
+  }
+
+  .icon-telegram,
+  .icon-phone,
+  .icon-instagram {
+    margin: 10px 0;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .brand {
+    flex: 0 0 100%;
+  }
+
+  
+}
